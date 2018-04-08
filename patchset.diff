@@ -1,0 +1,8 @@
+diff -bur mastodon-2.3.3/config/initializers/session_store.rb mastodon-2.3.3-edit/config/initializers/session_store.rb
+--- mastodon-2.3.3/config/initializers/session_store.rb	2018-03-26 18:14:05.000000000 -0600
++++ mastodon-2.3.3/config/initializers/session_store.rb	2018-04-07 18:32:09.496886341 -0600
+@@ -1,3 +1,3 @@
+ # Be sure to restart your server when you modify this file.
+ 
+-Rails.application.config.session_store :cookie_store, key: '_mastodon_session', secure: (Rails.env.production? || ENV['LOCAL_HTTPS'] == 'true')
++Rails.application.config.session_store :cookie_store, key: '_mastodon_session', secure: (ENV['LOCAL_HTTPS'] == 'false')
